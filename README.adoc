@@ -14,7 +14,7 @@ The talking points I used during the presentation were developed as I wrote the 
 == What files are here
 
 In the {sifile}[single_file] directory is the {sifile}/asciidoctor_presentation_calug_final.html[asciidoctor_presentation_calug_final.html] which is the final html file I used to present from.
-The final presentation file was generated from the {sifile}/asciidoc_presentation_calug.adoc[asciidoc_presentation_calug.adoc] file in the {sifile}[single_file] directory using the following code.
+The final presentation file was generated from the {sifile}/asciidoctor_presentation_calug.adoc[asciidoctor_presentation_calug.adoc] file in the {sifile}[single_file] directory using the following code.
 
 [source]
 ----
