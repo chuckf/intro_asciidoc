@@ -22,7 +22,7 @@ asciidoctor -T ./asciidoctor-deck.js/templates/haml/ -b deckjs asciidoctor_prese
 ----
 
 The {sifile}[single_file] directory contains the presentation adoc file in one large file with all the chapters included.
-The {spfile}[split_files] directory contains the presentation file broken down into its chapters, with the {spfile}/asciidoc_presentation_calug_multi.adoc[asciidoc_presentation_calug_multi.adoc] file acting as the index file.
+The {spfile}[split_files] directory contains the presentation file broken down into its chapters, with the {spfile}/asciidoctor_presentation_calug_multi.adoc[asciidoctor_presentation_calug_multi.adoc] file acting as the index file.
 There are a few small differences in order between the single and multi files, but they are essentially the same content.
 
 Assuming Asciidoctor has been installed on your system, running the following command will generate a HTML page from the {sifile}[single_file] directory
