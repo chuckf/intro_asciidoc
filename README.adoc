@@ -1,8 +1,9 @@
 = CALUG Presentation Notes
 Chuck Frain chuck@chuckfrain.net
 :ghub: https://github.com/chuckf/calug_adoc
-:sifile: {ghub}/single_file
-:spfile: {ghub}/split_files
+:ghubmas: https://github.com/chuckf/calug_adoc/tree/master
+:sifile: {ghubmas}/single_file
+:spfile: {ghubmas}/split_files
 
 == Introduction
 
