@@ -8,7 +8,7 @@ Chuck Frain chuck@chuckfrain.net
 == Introduction
 
 These are notes about the presentation I gave to to http://calug.org[Columbia Area Linux User Group] about http://asciidoc.org[Asciidoc] and http://asciidcotor.org[Asciidoctor].
-The presentation source files themselves are shared in the {ghub}[single_file] and {ghub}[split_files] directories.
+The presentation source files themselves are shared in the {sifile}[single_file] and {spfile}[split_files] directories.
 The talking points I used during the presentation were developed as I wrote the presentation and as I went along.
 
 == What files are here
