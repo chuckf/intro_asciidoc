@@ -1,0 +1,15 @@
+
+== Paragraphs
+
+Paragraphs are separated by blank lines.
+
+[%step]
+Write your paragraph sentences on separate lines.
+
+[%step]
+* Editing single lines and moving sentences around is easier.
+* It is easier to see when you have long sentences.
+* Each sentence becomes a string.
+* This will help when you're versioning.
+* When diffing changes, you don't get massive blocks of text with a one letter change.
+* If there are errors when generating a document, finding the line in a paragraph that is causing it is easier. (This is an edge case)

@@ -1,0 +1,33 @@
+
+== Admonitions
+
+Admonitions such as NOTE, TIP, WARNING, CAUTION, and IMPORTANT blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
+The rest of the paragraph text will be included.
+
+ifeval::["{backend}" == "html5"]
+
+[source,asciidoc]
+----
+NOTE: This is a note.
+This is a second line, same paragraph
+
+TIP: This is a tip.
+
+WARNING: This is a warning
+
+CAUTION: This is a caution
+
+IMPORTANT: This is an important thing
+----
+
+NOTE: This is a note.
+This is a second line, same paragraph
+
+TIP: This is a tip.
+
+WARNING: This is a warning
+
+CAUTION: This is a caution
+
+IMPORTANT: This is an important thing
+endif::[]

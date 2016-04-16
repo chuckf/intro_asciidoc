@@ -1,0 +1,8 @@
+
+== References
+
+* http://asciidoctor.org Asciidoctor
+* http://asciidoc.org Asciidoc
+* http://discuss.asciidoctor.org Asciidoctor Discussion Forum
+* http://twitter.com/mojavelinux Dan Allen
+* http://mrhaki.blogspot.ch/search/label/Asciidoc Mr. Haki's Blog

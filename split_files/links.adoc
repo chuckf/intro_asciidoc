@@ -1,0 +1,23 @@
+== Links
+
+Web links can easily be added to a document.
+Just by typing them in, they will become a live link in the rendered document.
+If you want a name displayed for the link, add it in square brackets directly after the link, with no space before the opening bracket.
+
+----
+Please visit the http://calug.org website for more information.
+Please visit the http://calug.org[CALUG] website for more information.
+----
+
+Please visit the http://calug.org website for more information.
+
+Please visit the http://calug.org[CALUG] website for more information.
+<<<<
+
+Links to local files may be created using the link: macro
+
+----
+link:finances.csv[The Finances File]
+----
+
+link:finances.csv[The Finances File]

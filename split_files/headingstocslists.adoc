@@ -1,0 +1,50 @@
+
+== Headings, TOC, and Lists
+
+Section heading are indicated with = sign up to five levels deep, not including the Document Title.
+Each section makes up an entry in the Table of Contents(TOC).
+The TOC has options to include down to a certain number of levels, 3 by default.
+The TOC can be placed at the beginning of the document, on the left or right side of the document,  or anywhere you want depending on the option selected.
+
+----
+= Level 0 (Document Title)
+== Level 1
+=== Level 2
+==== Level 3
+===== Level 4
+====== Level 5
+----
+
+<<<<
+
+Lists can be created as an ordered or unordered list up to five levels deep.
+A period (.) at the beginning indicates an ordered list.
+An asterisk (*) is used for unordered list.
+
+<<<<
+
+----
+. One
+. Two
+. Three
+.. Three Sub 1
+----
+
+. One
+. Two
+. Three
+.. Three Sub 1
+
+<<<<
+
+----
+* One
+* Two
+* Three
+** Three Sub 1
+----
+
+* One
+* Two
+* Three
+** Three Sub 1

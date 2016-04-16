@@ -1,0 +1,13 @@
+
+ifeval::["{backend}" == "html5"]
+[discrete]
+== Title Page
+
+{doctitle}
+
+{firstname} {lastname}
+
+{email}
+
+Presented to {uri-calug}[CALUG] on {date}
+endif::[]

@@ -1,0 +1,39 @@
+
+== Tables
+
+Create tables within the document
+
+----
+[options="header", grid=rows]
+|===
+|Cell in C1R1 |Cell in C2R1
+|Cell in C1R2 |Cell in C2R2
+|Cell in C1R3 |Cell in C2R3
+|===
+----
+
+[options="header", grid=rows]
+|===
+|Cell in C1R1 |Cell in C2R1
+|Cell in C1R2 |Cell in C2R2
+|Cell in C1R3 |Cell in C2R3
+|===
+
+<<<<
+
+Create a table by including an external a CSV file
+
+[source,asciidoc]
+----
+[format="csv", options="header"]
+|===
+include::finances.csv[] <1>
+|===
+----
+
+<1> The CSV file to create the table from
+
+[format="csv", options="header"]
+|===
+include::finances.csv[]
+|===

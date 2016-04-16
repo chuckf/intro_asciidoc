@@ -1,0 +1,39 @@
+
+== Attributes
+
+Use attributes where they make sense.
+
+Attributes can be used and thought of as variables.
+Attributes can be stored in separate files for ease of reuse and included in a master index file.
+
+[%step]
+* Product and Company names
+* Websites
+* Repeated, difficult to type text
+* Attributes can be nested:
+
+[%step]
+
+[source,config]
+----
+:calug: Columbia Area Linux User Group
+:prod: Linux
+:lead: mailto:chuck@chuckfrain.net[Chuck Frain]
+:uri-calist: http://lists.unknownlamer.org
+:uri-archive: {uri-calist}/pipermail/calug
+:uri-mar16mail: {uri-archive}/2016-March
+:uri-mar16thread: {uri-mar16mail}/thread.html
+:uri-mar16list: {uri-mar16mail}/list.html
+----
+
+<<<<
+
+----
+Welcome to {calug}, a {prod} and free software group.
+If you want to give a presentation, please contact {lead}.
+The March mailing list is archived by {uri-mar16thread}[thread] or list {uri-mar16list}.
+----
+
+Welcome to {calug}, a {prod} and free software group.
+If you want to give a presentation, please contact {lead}.
+The March mailing list is archived by {uri-mar16thread}[thread] or list {uri-mar16list}.

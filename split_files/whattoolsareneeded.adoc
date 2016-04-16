@@ -1,0 +1,26 @@
+
+== What tools are needed to write in Asciidoc?
+
+A text editor
+
+[%step]
+** Vim
+** Emacs
+** Notepad++
+** Atom
+** Sublime
+
+[%step]
+As long as the editor saves in ascii text (i.e a .docx file will not work) you can use it
+
+[%step]
+*_It really is just text!_*
+
+<<<<
+
+Nice to have:
+
+[%step]
+* Syntax Highlighter
+* Preview plugin for your browser
+* Preview plugin for your editor (if supported)

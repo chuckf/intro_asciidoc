@@ -1,0 +1,17 @@
+
+== What does an Asciidoc doc look like?
+
+Examples, Tips, Tricks
+
+Demo Time!
+
+////
+// [canvas-image=images/one_more_thing.jpg]
+== Before moving on...
+
+image::one_more_thing.jpg[]
+
+[.canvas-caption, position=center]
+[%step]
+Asciidoc does Slides
+////

@@ -1,0 +1,13 @@
+
+== Conditional Blocks
+
+----
+\ifdef::[]
+\ifndef::[]
+\ifeval::[]
+
+\endif::[]
+----
+Conditional text can be used either by the existence or not of an attribute for the output.
+
+Conditional text can also be evaluated based on evaluating conditions like section number levels, output file name, backend used, and other items.

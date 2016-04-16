@@ -1,0 +1,6 @@
+
+== Images
+
+Images can be added to a document using the image::<filename.jpg>[] attribute.
+
+image::bat-tux.jpg[]

@@ -1,0 +1,15 @@
+
+== Comment your documentation
+
+Comment your documentation.
+
+----
+// Asciidoc supports single line comments using a double slash at the beginning of the line.
+
+////
+A block of text may be commented using four slashes on the line before and after the text to be commented out.
+Using comments allows you to leave thoughts for yourself or co-writers about the text, future features that are not ready to be published, or around text that is undecided.
+////
+----
+
+Comments are not passed to processed output.

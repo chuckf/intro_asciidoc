@@ -1,0 +1,13 @@
+
+== What is Asciidoc?
+
+* Asciidoc is a markup language
+* Started life in the Python project
+* It is readable as ascii text
+* It is extensible
+// such as the twitter and pig latin extensions
+* Works well in Git and other versioning tools
+* Allows for include files
+* Standard file extensions
+** *.adoc*, .asciidoc, .asc (Supported by Github)
+** .ad

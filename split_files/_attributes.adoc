@@ -1,0 +1,27 @@
+= Introduction to Asciidoc(tor)
+Chuck Frain <chuck@chuckfrain.net>
+:date: April 13, 2016
+// :backend: deckjs
+:deckjs_transition: fade
+:theme:
+:navigation:
+:menu:
+:split:
+// :backend: revealjs
+// :revealjs_theme: solarized
+// :revealjs_control: false
+:toc: macro
+:icons: font
+:imagesdir: ./images
+:uri-calug: http://www.calug.org
+:uri-adr: http://asciidoctor.org
+:uri-adoc: http://asciidoc.org
+// This is in place for the attributes section
+:calug: Columbia Area Linux User Group
+:prod: Linux
+:lead: mailto:chuck@chuckfrain.net[Chuck Frain]
+:uri-calist: http://lists.unknownlamer.org
+:uri-archive: {uri-calist}/pipermail/calug
+:uri-mar16mail: {uri-archive}/2016-March
+:uri-mar16thread: {uri-mar16mail}/thread.html
+:uri-mar16list: {uri-mar16mail}/list.html
