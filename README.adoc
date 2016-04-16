@@ -39,4 +39,16 @@ Running the following command will generate a HTML page from the {spfile}[split_
 asciidoctor asciidoctor_presentation_calug_multi.adoc
 ----
 
-If you have any questions about this presentation, please contact {author}
+== References
+
+These are the reference links from my final slide of the presentation.
+
+* http://asciidoctor.org[Asciidoctor]
+* http://asciidoc.org[Asciidoc]
+* http://discuss.asciidoctor.org[Asciidoctor Discussion Forum]
+* http://twitter.com/mojavelinux[Dan Allen]
+* http://mrhaki.blogspot.ch/search/label/Asciidoc[Mr. Haki's Blog]
+
+== Questions and comments
+
+If you have any questions or comments about this presentation, please contact {author}
