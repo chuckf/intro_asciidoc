@@ -1,42 +1,42 @@
-= CALUG Presentation Notes
+= Unallocated Space Presentation Notes
 Chuck Frain chuck@chuckfrain.net
-:ghub: https://github.com/chuckf/calug_adoc
-:ghubmas: https://github.com/chuckf/calug_adoc/tree/master
+:ghub: https://github.com/chuckf/intro_asciidoc
+:ghubmas: https://github.com/chuckf/intro_asciidoc/tree/uas_final
 :sifile: {ghubmas}/single_file
 :spfile: {ghubmas}/split_files
 
 == Introduction
 
-These are notes about the presentation I gave to to http://calug.org[Columbia Area Linux User Group] about http://asciidoc.org[Asciidoc] and http://asciidcotor.org[Asciidoctor].
+These are notes about the presentation I gave to to http://unallocatedspace.org[Unallocated Space] about http://asciidoc.org[Asciidoc] and http://asciidcotor.org[Asciidoctor].
 The presentation source files themselves are shared in the {sifile}[single_file] and {spfile}[split_files] directories.
 The talking points I used during the presentation were developed as I wrote the presentation and as I went along.
 
 == What files are here
 
-In the {sifile}[single_file] directory is the {sifile}/asciidoctor_presentation_calug_final.html[asciidoctor_presentation_calug_final.html] which is the final html file I used to present from.
-The final presentation file was generated from the {sifile}/asciidoctor_presentation_calug.adoc[asciidoctor_presentation_calug.adoc] file in the {sifile}[single_file] directory using the following code.
+In the {sifile}[single_file] directory is the {sifile}/asciidoctor_presentation_uas_final.html[asciidoctor_presentation_uas_final.html] which is the final html file I used to present from.
+The final presentation file was generated from the {sifile}/asciidoctor_presentation_uas.adoc[asciidoctor_presentation_uas.adoc] file in the {sifile}[single_file] directory using the following code.
 
 [source]
 ----
-asciidoctor -T ./asciidoctor-deck.js/templates/haml/ -b deckjs asciidoctor_presentation_calug.adoc -o asciidoctor_presentation_calug_final.html
+asciidoctor -T ./asciidoctor-deck.js/templates/haml/ -b deckjs asciidoctor_presentation_uas.adoc -o asciidoctor_presentation_uas_final.html
 ----
 
 The {sifile}[single_file] directory contains the presentation adoc file in one large file with all the chapters included.
-The {spfile}[split_files] directory contains the presentation file broken down into its chapters, with the {spfile}/asciidoctor_presentation_calug_multi.adoc[asciidoctor_presentation_calug_multi.adoc] file acting as the index file.
+The {spfile}[split_files] directory contains the presentation file broken down into its chapters, with the {spfile}/asciidoctor_presentation_uas_multi.adoc[asciidoctor_presentation_uas_multi.adoc] file acting as the index file.
 There are a few small differences in order between the single and multi files, but they are essentially the same content.
 
 Assuming Asciidoctor has been installed on your system, running the following command will generate a HTML page from the {sifile}[single_file] directory
 
 [source]
 ----
-asciidoctor asciidoctor_presentation_calug.adoc
+asciidoctor asciidoctor_presentation_uas.adoc
 ----
 
 Running the following command will generate a HTML page from the {spfile}[split_files] directory
 
 [source]
 ----
-asciidoctor asciidoctor_presentation_calug_multi.adoc
+asciidoctor asciidoctor_presentation_uas_multi.adoc
 ----
 
 == References
