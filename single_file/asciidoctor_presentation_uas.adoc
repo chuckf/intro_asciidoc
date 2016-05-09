@@ -17,7 +17,6 @@ Chuck Frain <chuck@chuckfrain.net>
 :uri-adr: http://asciidoctor.org
 :uri-adoc: http://asciidoc.org
 :uri-uas: http://unallocatedspace.org
-:uri-pres: http://unallocatedspace.org
 // This is in place for the attributes section
 :calug: Columbia Area Linux User Group
 :prod: Linux
@@ -272,14 +271,14 @@ Images can be added to a document using the image::<filename.jpg>[] attribute.
 [source, asciidoc]
 ----
 image::bat-tux.jpg[]
-image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[align=right]
+image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[]
 ----
 
 image::bat-tux.jpg[]
-image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[align=right]
+image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[]
 
-The images are stored, by default, in the  `images` directory relative to the document.
-This can be modified by using the  `:imagesdir:` directive and spcifiying the desired relative path.
+The images are stored, by default, in the `images` directory relative to the document.
+This can be modified by using the  `:imagesdir:` directive and specifying the desired relative path.
 
 <<<<
 
@@ -315,6 +314,7 @@ Please visit the http://unallocatedspace.org[Unallocated Space] website for more
 Please visit the http://unallocatedspace.org website for more information.
 
 Please visit the http://unallocatedspace.org[Unallocated Space] website for more information.
+
 <<<<
 
 Links to local files may be created using the `link:` macro
