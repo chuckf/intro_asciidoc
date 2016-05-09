@@ -144,6 +144,7 @@ Nice to have:
 
 == What does an Asciidoc doc look like?
 
+.Asciidoc source vs rendered
 image::asciidoctor_presentation_uas-54029.png[]
 
 Examples, Tips, Tricks
