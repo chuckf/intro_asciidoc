@@ -1,6 +1,6 @@
 = Introduction to Asciidoc(tor)
 Chuck Frain <chuck@chuckfrain.net>
-:date: April 13, 2016
+:date: May 14, 2016
 // :backend: deckjs
 :deckjs_transition: fade
 :theme:
@@ -16,6 +16,8 @@ Chuck Frain <chuck@chuckfrain.net>
 :uri-calug: http://www.calug.org
 :uri-adr: http://asciidoctor.org
 :uri-adoc: http://asciidoc.org
+:uri-uas: http://unallocatedspace.org
+:uri-pres: http://unallocatedspace.org
 // This is in place for the attributes section
 :calug: Columbia Area Linux User Group
 :prod: Linux
@@ -36,7 +38,7 @@ ifeval::["{backend}" == "html5"]
 
 {email}
 
-Presented to {uri-calug}[CALUG] on {date}
+Presented to {uri-uas}[Unallocated Space] on {date}
 endif::[]
 
 == What We'll Discuss
@@ -56,8 +58,8 @@ endif::[]
 * Works well in Git and other versioning tools
 * Allows for include files
 * Standard file extensions
-** *.adoc*, .asciidoc, .asc (Supported by Github)
-** .ad
+** *`.adoc`*, `.asciidoc`, `.asc` (Supported by Github)
+** `.ad`
 
 == What is Asciidoctor?
 
@@ -71,7 +73,7 @@ It converts Asciidoc documents to other formats, directly or indirectly, such as
 ** manpage
 ** mobi
 ** epub3
-** slides
+// ** slides
 
 <<<<
 
@@ -93,6 +95,28 @@ Docker Image
 
 _See the {uri-adr}[Asciidoctor.org] page for more details_
 
+<<<<
+
+Using Asciidoctor
+
+[source,bash]
+----
+asciidoctor asciidoc_file.adoc
+----
+The above command generates `asciidoc_file.html` and embeds the CSS
+
+[source, bash]
+----
+asciidoctor -a linkcss asciidoc_file.adoc
+----
+The above command generates `asciidoc_file.html` and `asciidoctor.css` files
+
+[source, bash]
+----
+asciidoctor -b docbook asciidoc_file.adoc
+----
+The above command generates a docbook `asciidoc_file.xml` file
+
 == What tools are needed to write in Asciidoc?
 
 A text editor
@@ -105,7 +129,7 @@ A text editor
 ** Sublime
 
 [%step]
-As long as the editor saves in ascii text (i.e a .docx file will not work) you can use it
+As long as the editor saves in ascii text (i.e a `.docx` file will not work) you can use it
 
 [%step]
 *_It really is just text!_*
@@ -121,10 +145,12 @@ Nice to have:
 
 == What does an Asciidoc doc look like?
 
+image::asciidoctor_presentation_uas-54029.png[]
+
 Examples, Tips, Tricks
 
 Demo Time!
-////
+
 // [canvas-image=images/one_more_thing.jpg]
 == Before moving on...
 
@@ -133,14 +159,14 @@ image::one_more_thing.jpg[]
 [.canvas-caption, position=center]
 [%step]
 Asciidoc does Slides
-////
 
 == Headings, TOC, and Lists
 
-Section heading are indicated with = sign up to five levels deep, not including the Document Title.
-Each section makes up an entry in the Table of Contents(TOC).
+Section heading are indicated with `=` sign up to five levels deep, not including the Document Title.
+Each section can make up an entry in the Table of Contents(TOC).
 The TOC has options to include down to a certain number of levels, 3 by default.
-The TOC can be placed at the beginning of the document, on the left or right side of the document,  or anywhere you want depending on the option selected.
+The TOC can exclude certain headings using the `[discreet]` tag.
+The TOC can be placed at the beginning of the document, on the left or right side of the document,  or anywhere within the document depending on the option selected.
 
 ----
 = Level 0 (Document Title)
@@ -154,8 +180,8 @@ The TOC can be placed at the beginning of the document, on the left or right sid
 <<<<
 
 Lists can be created as an ordered or unordered list up to five levels deep.
-A period (.) at the beginning indicates an ordered list.
-An asterisk (*) is used for unordered list.
+A period (`.`) at the beginning indicates an ordered list.
+An asterisk (`*`) is used for unordered list.
 
 <<<<
 
@@ -187,7 +213,7 @@ An asterisk (*) is used for unordered list.
 
 == Paragraphs
 
-Paragraphs are separated by blank lines.
+Paragraphs are just blocks of text separated by blank lines.
 
 [%step]
 Write your paragraph sentences on separate lines.
@@ -222,13 +248,13 @@ Create tables within the document
 
 <<<<
 
-Create a table by including an external a CSV file
+Create a table by including an external CSV file
 
 [source,asciidoc]
 ----
 [format="csv", options="header"]
 |===
-include::finances.csv[] <1>
+include::financesdemo.csv[] <1>
 |===
 ----
 
@@ -236,14 +262,43 @@ include::finances.csv[] <1>
 
 [format="csv", options="header"]
 |===
-include::finances.csv[]
+include::financesdemo.csv[]
 |===
 
 == Images
 
 Images can be added to a document using the image::<filename.jpg>[] attribute.
 
+[source, asciidoc]
+----
 image::bat-tux.jpg[]
+image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[align=right]
+----
+
+image::bat-tux.jpg[]
+image::http://www.picgifs.com/graphics/t/tux/graphics-tux-850120.gif[align=right]
+
+The images are stored, by default, in the  `images` directory relative to the document.
+This can be modified by using the  `:imagesdir:` directive and spcifiying the desired relative path.
+
+<<<<
+
+The `screenshot` attribute can be used when the `asciidoc-screenshot` extension is installed.
+The following code example in a document will take a screenshot of the Google France lading page when the document is rendered.
+
+[source,asciidoc]
+----
+[screenshot, url=http://google.fr, name=google]
+Google Landing page
+----
+
+Using the `asciidoc-image-helper` plugin for the Atom editor allows for pasting images from the clipboard into the current document.
+When pasted, the image file is created in the `images` directory (by default) with the name of the document and a random hash as the filename. The `image::` attribute with this filename is created within the doc.
+
+[source,asciidoc]
+----
+image::asciidoctor_presentation_uas-26aa6.png[]
+----
 
 == Links
 
@@ -252,22 +307,23 @@ Just by typing them in, they will become a live link in the rendered document.
 If you want a name displayed for the link, add it in square brackets directly after the link, with no space before the opening bracket.
 
 ----
-Please visit the http://calug.org website for more information.
-Please visit the http://calug.org[CALUG] website for more information.
+Please visit the http://unallocatedspace.org website for more information.
+
+Please visit the http://unallocatedspace.org[Unallocated Space] website for more information.
 ----
 
-Please visit the http://calug.org website for more information.
+Please visit the http://unallocatedspace.org website for more information.
 
-Please visit the http://calug.org[CALUG] website for more information.
+Please visit the http://unallocatedspace.org[Unallocated Space] website for more information.
 <<<<
 
-Links to local files may be created using the link: macro
+Links to local files may be created using the `link:` macro
 
 ----
-link:finances.csv[The Finances File]
+link:financesdemo.csv[The Finances File]
 ----
 
-link:finances.csv[The Finances File]
+link:financesdemo.csv[The Finances File]
 
 == Attributes
 
@@ -331,7 +387,7 @@ This feature can be used in many different ways, among them:
 
 == Admonitions
 
-Admonitions such as NOTE, TIP, WARNING, CAUTION, and IMPORTANT blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
+Admonitions such as `NOTE`, `TIP`, `WARNING`, `CAUTION`, and `IMPORTANT` blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
 The rest of the paragraph text will be included.
 
 ifeval::["{backend}" == "html5"]
@@ -429,7 +485,7 @@ print 'I owe the grocer $%.2f' % grocery_bill <4>
 ----
 Conditional text can be used either by the existence or not of an attribute for the output.
 
-Conditional text can also be evaluated based on evaluating conditions like section number levels, output file name, backend used, and other items.
+Conditional text can also be evaluated based on evaluating conditions like section number levels, output file name, the backend used, and other items.
 
 == References
 
@@ -438,3 +494,7 @@ Conditional text can also be evaluated based on evaluating conditions like secti
 * http://discuss.asciidoctor.org Asciidoctor Discussion Forum
 * http://twitter.com/mojavelinux Dan Allen
 * http://mrhaki.blogspot.ch/search/label/Asciidoc Mr. Haki's Blog
+* https://github.com/chuckf/intro_asciidoc/tree/uas_final UAS Presentation Files
+
+.UAS Presentation link on Github
+image::uas_final.png[]
