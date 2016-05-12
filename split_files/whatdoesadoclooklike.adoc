@@ -1,11 +1,14 @@
 
 == What does an Asciidoc doc look like?
 
+.Asciidoc source vs rendered
+image::asciidoctor_presentation_uas-54029.png[]
+
 Examples, Tips, Tricks
 
 Demo Time!
 
-////
+
 // [canvas-image=images/one_more_thing.jpg]
 == Before moving on...
 
@@ -14,4 +17,3 @@ image::one_more_thing.jpg[]
 [.canvas-caption, position=center]
 [%step]
 Asciidoc does Slides
-////

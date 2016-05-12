@@ -4,7 +4,8 @@
 Section heading are indicated with = sign up to five levels deep, not including the Document Title.
 Each section makes up an entry in the Table of Contents(TOC).
 The TOC has options to include down to a certain number of levels, 3 by default.
-The TOC can be placed at the beginning of the document, on the left or right side of the document,  or anywhere you want depending on the option selected.
+The TOC can exclude certain headings using the `[discreet]` tag.
+The TOC can be placed at the beginning of the document, on the left or right side of the document,  or anywhere within the document depending on the option selected.
 
 ----
 = Level 0 (Document Title)

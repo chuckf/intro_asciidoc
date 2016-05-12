@@ -11,7 +11,7 @@ It converts Asciidoc documents to other formats, directly or indirectly, such as
 ** manpage
 ** mobi
 ** epub3
-** slides
+// ** slides
 
 <<<<
 
@@ -31,4 +31,26 @@ apt-get install asciidoctor -y
 
 Docker Image
 
-_See the http://asciidoctor.org[Asciidoctor.org] page for more details_
+_See the {uri-adr}[Asciidoctor.org] page for more details_
+
+<<<<
+
+Using Asciidoctor
+
+[source,bash]
+----
+asciidoctor asciidoc_file.adoc
+----
+The above command generates `asciidoc_file.html` and embeds the CSS
+
+[source, bash]
+----
+asciidoctor -a linkcss asciidoc_file.adoc
+----
+The above command generates `asciidoc_file.html` and `asciidoctor.css` files
+
+[source, bash]
+----
+asciidoctor -b docbook asciidoc_file.adoc
+----
+The above command generates a docbook `asciidoc_file.xml` file

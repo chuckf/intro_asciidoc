@@ -1,6 +1,6 @@
 = Introduction to Asciidoc(tor)
 Chuck Frain <chuck@chuckfrain.net>
-:date: April 13, 2016
+:date: May 14, 2016
 // :backend: deckjs
 :deckjs_transition: fade
 :theme:
@@ -10,12 +10,13 @@ Chuck Frain <chuck@chuckfrain.net>
 // :backend: revealjs
 // :revealjs_theme: solarized
 // :revealjs_control: false
-:toc: macro
+:toc: left
 :icons: font
 :imagesdir: ./images
 :uri-calug: http://www.calug.org
 :uri-adr: http://asciidoctor.org
 :uri-adoc: http://asciidoc.org
+:uri-uas: http://unallocatedspace.org
 // This is in place for the attributes section
 :calug: Columbia Area Linux User Group
 :prod: Linux

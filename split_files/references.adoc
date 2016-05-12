@@ -1,8 +1,12 @@
 
 == References
 
-* http://asciidoctor.org Asciidoctor
-* http://asciidoc.org Asciidoc
+* {uri-adr} Asciidoctor
+* {uri-adoc} Asciidoc
 * http://discuss.asciidoctor.org Asciidoctor Discussion Forum
 * http://twitter.com/mojavelinux Dan Allen
 * http://mrhaki.blogspot.ch/search/label/Asciidoc Mr. Haki's Blog
+* https://github.com/chuckf/intro_asciidoc/tree/uas_final UAS Presentation Files
+
+.UAS Presentation link on Github
+image::uas_final.png[]

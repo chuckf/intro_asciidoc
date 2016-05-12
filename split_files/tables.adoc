@@ -27,7 +27,7 @@ Create a table by including an external a CSV file
 ----
 [format="csv", options="header"]
 |===
-include::finances.csv[] <1>
+include::financesdemo.csv[] <1>
 |===
 ----
 
@@ -35,5 +35,5 @@ include::finances.csv[] <1>
 
 [format="csv", options="header"]
 |===
-include::finances.csv[]
+include::financesdemo.csv[]
 |===

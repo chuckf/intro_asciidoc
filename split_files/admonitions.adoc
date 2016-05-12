@@ -1,7 +1,7 @@
 
 == Admonitions
 
-Admonitions such as NOTE, TIP, WARNING, CAUTION, and IMPORTANT blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
+Admonitions such as `NOTE`, `TIP`, `WARNING`, `CAUTION`, and `IMPORTANT` blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
 The rest of the paragraph text will be included.
 
 ifeval::["{backend}" == "html5"]

@@ -9,5 +9,5 @@ ifeval::["{backend}" == "html5"]
 
 {email}
 
-Presented to {uri-calug}[CALUG] on {date}
+Presented to {uri-uas}[Unallocated Space] on {date}
 endif::[]

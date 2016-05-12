@@ -9,5 +9,5 @@
 * Works well in Git and other versioning tools
 * Allows for include files
 * Standard file extensions
-** *.adoc*, .asciidoc, .asc (Supported by Github)
-** .ad
+** *`.adoc`*, `.asciidoc`, `.asc` (Supported by Github)
+** `.ad`
