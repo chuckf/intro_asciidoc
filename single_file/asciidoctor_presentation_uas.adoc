@@ -292,6 +292,8 @@ The following code example in a document will take a screenshot of the Google Fr
 Google Landing page
 ----
 
+<<<<
+
 Using the `asciidoc-image-helper` plugin for the Atom editor allows for pasting images from the clipboard into the current document.
 When pasted, the image file is created in the `images` directory (by default) with the name of the document and a random hash as the filename. The `image::` attribute with this filename is created within the doc.
 
