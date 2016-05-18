@@ -1,6 +1,6 @@
 = Introduction to Asciidoc(tor)
-Chuck Frain <chuck@chuckfrain.net>
-:date: May 14, 2016
+Chuck Frain <cfrain@aplura.com>
+:date: May 19, 2016
 // :backend: deckjs
 :deckjs_transition: fade
 :theme:
@@ -17,6 +17,8 @@ Chuck Frain <chuck@chuckfrain.net>
 :uri-adr: http://asciidoctor.org
 :uri-adoc: http://asciidoc.org
 :uri-uas: http://unallocatedspace.org
+:uri-apl: http://aplura.com
+:gh-adr: https://github.com/asciidoctor
 // This is in place for the attributes section
 :calug: Columbia Area Linux User Group
 :prod: Linux
@@ -37,7 +39,7 @@ ifeval::["{backend}" == "html5"]
 
 {email}
 
-Presented to {uri-uas}[Unallocated Space] on {date}
+Presented to {uri-apl}[Aplura, LLC] on {date}
 endif::[]
 
 == What We'll Discuss
@@ -56,9 +58,11 @@ endif::[]
 // such as the twitter and pig latin extensions
 * Works well in Git and other versioning tools
 * Allows for include files
+** Gives the ability to write once and use multiple times
 * Standard file extensions
-** *`.adoc`*, `.asciidoc`, `.asc` (Supported by Github)
-** `.ad`
+** *`.adoc`*
+** `.asciidoc`, `.asc` (Supported by Github), `.ad` (Depricated)
+** `.asciidoc.txt` (Extremely rare)
 
 == What is Asciidoctor?
 
@@ -115,6 +119,16 @@ The above command generates `asciidoc_file.html` and `asciidoctor.css` files
 asciidoctor -b docbook asciidoc_file.adoc
 ----
 The above command generates a docbook `asciidoc_file.xml` file
+
+<<<<
+
+Potential Add-ons of interest
+
+* {gh-adr}/asciidoctorj-screenshot[Asciidoctorj Screenshot]
+* {gh-adr}/asciidoctor-confluence[Asciidoctor Confluence]
+* {gh-adr}/gitbucket-asciidoctor-plugin[Gitbucket Asciidoctor Plugin]
+* {gh-adr}/asciidoctor.js[Asciidoctor.js]
+* {gh-adr}/asciidoctor-diagram[Asciidoctor Diagram] (DITTA, Graphviz, PlanetUML)
 
 == What tools are needed to write in Asciidoc?
 
@@ -216,12 +230,11 @@ An asterisk (`*`) is used for unordered list.
 Paragraphs are just blocks of text separated by blank lines.
 
 [%step]
-Write your paragraph sentences on separate lines.
+Write your paragraph's sentences on separate lines.
 
 [%step]
 * Editing single lines and moving sentences around is easier.
 * It is easier to see when you have long sentences.
-* Each sentence becomes a string.
 * This will help when you're versioning.
 * When diffing changes, you don't get massive blocks of text with a one letter change.
 * If there are errors when generating a document, finding the line in a paragraph that is causing it is easier. (This is an edge case)
@@ -283,19 +296,20 @@ This can be modified by using the  `:imagesdir:` directive and specifying the de
 
 <<<<
 
-The `screenshot` attribute can be used when the `asciidoc-screenshot` extension is installed.
-The following code example in a document will take a screenshot of the Google France lading page when the document is rendered.
+The `screenshot` attribute can be used when the `asciidoctorj-screenshot` extension is installed.
+The following code example in a document will take a screenshot of the Aplura home page when the document is rendered.
 
 [source,asciidoc]
 ----
-[screenshot, url=http://google.fr, name=google]
-Google Landing page
+[screenshot, url=http://aplura.com, name=Aplura Home Page]
+Aplura Home Page
 ----
 
 <<<<
 
 Using the `asciidoc-image-helper` plugin for the Atom editor allows for pasting images from the clipboard into the current document.
-When pasted, the image file is created in the `images` directory (by default) with the name of the document and a random hash as the filename. The `image::` attribute with this filename is created within the doc.
+When pasted, the image file is created in the `images` directory (by default) with the name of the document and a random hash as the filename.
+The `image::` attribute with this filename is created within the doc.
 
 [source,asciidoc]
 ----
@@ -309,24 +323,28 @@ Just by typing them in, they will become a live link in the rendered document.
 If you want a name displayed for the link, add it in square brackets directly after the link, with no space before the opening bracket.
 
 ----
-Please visit the http://unallocatedspace.org website for more information.
+Please visit the http://aplura.com website for more information.
 
-Please visit the http://unallocatedspace.org[Unallocated Space] website for more information.
+Please visit the http://aplura.com[Aplura, LLC] website for more information.
 ----
 
-Please visit the http://unallocatedspace.org website for more information.
+Please visit the http://aplura.com website for more information.
 
-Please visit the http://unallocatedspace.org[Unallocated Space] website for more information.
+Please visit the http://aplura.com[Aplura, LLC] website for more information.
 
 <<<<
 
-Links to local files may be created using the `link:` macro
+Links to files may be created using the `link:` macro
 
 ----
 link:financesdemo.csv[The Finances File]
+
+link:{url-apl}/docs/Splunk_Best_Practices.pdf[Splunk Best Practices PDF]
 ----
 
 link:financesdemo.csv[The Finances File]
+
+link:{url-apl}/docs/Splunk_Best_Practices.pdf[Splunk Best Practices PDF]
 
 == Attributes
 
@@ -335,7 +353,6 @@ Use attributes where they make sense.
 Attributes can be used and thought of as variables.
 Attributes can be stored in separate files for ease of reuse and included in a master index file.
 
-[%step]
 * Product and Company names
 * Websites
 * Repeated, difficult to type text
@@ -377,7 +394,6 @@ The March mailing list is archived by {uri-mar16thread}[thread] or list {uri-mar
 The include macro will include the file indicated to the generated document.
 This feature can be used in many different ways, among them:
 
-[%step]
 * Company name and contact information
 * About Us text
 * Legal text
@@ -393,8 +409,6 @@ This feature can be used in many different ways, among them:
 Admonitions such as `NOTE`, `TIP`, `WARNING`, `CAUTION`, and `IMPORTANT` blocks can be created simply by using the name in all caps followed by a colon at the beginning of a line.
 The rest of the paragraph text will be included.
 
-ifeval::["{backend}" == "html5"]
-
 [source,asciidoc]
 ----
 NOTE: This is a note.
@@ -408,6 +422,9 @@ CAUTION: This is a caution
 
 IMPORTANT: This is an important thing
 ----
+
+ifeval::["{backend}" == "html5"]
+
 
 NOTE: This is a note.
 This is a second line, same paragraph
@@ -440,7 +457,7 @@ Comments are not passed to processed output.
 
 Callouts in your examples
 
-[source, asciidoctor]
+[source, python]
 ----
 prices = {'apple': 0.40, 'banana': 0.50} \<1>
 my_purchase = {
@@ -493,11 +510,8 @@ Conditional text can also be evaluated based on evaluating conditions like secti
 == References
 
 * {uri-adr} Asciidoctor
+* {gh-adr} Asciidoctor on Github
 * {uri-adoc} Asciidoc
 * http://discuss.asciidoctor.org Asciidoctor Discussion Forum
 * http://twitter.com/mojavelinux Dan Allen
 * http://mrhaki.blogspot.ch/search/label/Asciidoc Mr. Haki's Blog
-* https://github.com/chuckf/intro_asciidoc/tree/uas_final UAS Presentation Files
-
-.UAS Presentation link on Github
-image::uas_final.png[]
