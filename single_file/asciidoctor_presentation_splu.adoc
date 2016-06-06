@@ -1,6 +1,6 @@
 = Introduction to Asciidoc(tor)
 Chuck Frain <cfrain@aplura.com>
-:date: May 19, 2016
+:date: June 6, 2016
 // :backend: deckjs
 :deckjs_transition: fade
 :theme:
@@ -18,7 +18,9 @@ Chuck Frain <cfrain@aplura.com>
 :uri-adoc: http://asciidoc.org
 :uri-uas: http://unallocatedspace.org
 :uri-apl: http://aplura.com
+:uri-splu: https://usergroups.splunk.com/group/baltimore-splunk-user-group.html
 :gh-adr: https://github.com/asciidoctor
+:figure-caption!:
 // This is in place for the attributes section
 :calug: Columbia Area Linux User Group
 :prod: Linux
@@ -39,15 +41,15 @@ ifeval::["{backend}" == "html5"]
 
 {email}
 
-Presented to {uri-apl}[Aplura, LLC] on {date}
+Presented to {uri-splu}[Baltimore Splunk User Group] on {date}
 endif::[]
 
 == What We'll Discuss
 
-* What is Asciidcoc?
+* What is Asciidoc?
 * What is Asciidoctor?
 * Writing Tools
-* Writing Tips and Tricks for Asciidoc
+* Getting Started Tips and Tricks for Asciidoc
 
 == What is Asciidoc?
 
@@ -59,6 +61,7 @@ endif::[]
 * Works well in Git and other versioning tools
 * Allows for include files
 ** Gives the ability to write once and use multiple times
+* Low barrier to learn syntax
 * Standard file extensions
 ** *`.adoc`*
 ** `.asciidoc`, `.asc` (Supported by Github), `.ad` (Depricated)
@@ -135,11 +138,11 @@ Potential Add-ons of interest
 A text editor
 
 [%step]
+** Atom (with https://atom.io/packages/asciidoc-assistant[Asciidoc Assistant] package)
 ** Vim
 ** Emacs
-** Notepad++
-** Atom
 ** Sublime
+** Notepad++
 
 [%step]
 As long as the editor saves in ascii text (i.e a `.docx` file will not work) you can use it
@@ -160,6 +163,7 @@ Nice to have:
 
 .Asciidoc source vs rendered
 image::asciidoctor_presentation_uas-54029.png[]
+
 
 Examples, Tips, Tricks
 
@@ -296,24 +300,24 @@ This can be modified by using the  `:imagesdir:` directive and specifying the de
 
 <<<<
 
-The `screenshot` attribute can be used when the `asciidoctorj-screenshot` extension is installed.
-The following code example in a document will take a screenshot of the Aplura home page when the document is rendered.
-
-[source,asciidoc]
-----
-[screenshot, url=http://aplura.com, name=Aplura Home Page]
-Aplura Home Page
-----
-
-<<<<
-
 Using the `asciidoc-image-helper` plugin for the Atom editor allows for pasting images from the clipboard into the current document.
 When pasted, the image file is created in the `images` directory (by default) with the name of the document and a random hash as the filename.
 The `image::` attribute with this filename is created within the doc.
 
 [source,asciidoc]
 ----
-image::asciidoctor_presentation_uas-26aa6.png[]
+image::asciidoctor_presentation_splu-26aa6.png[]
+----
+
+<<<<
+
+The `screenshot` attribute can be used when the `asciidoctorj-screenshot` extension is used.
+The following code example in a document will take a screenshot of the Aplura home page when the document is rendered.
+
+[source,asciidoc]
+----
+[screenshot, url=http://aplura.com, name=Aplura Home Page]
+Aplura Home Page
 ----
 
 == Links
@@ -469,7 +473,7 @@ print 'I owe the grocer $%.2f' % grocery_bill \<4>
 
 <1> The price of fruit
 <2> The amount of each fruit I'm purchasing
-<3> Calcualting the bill for my fruit purchase
+<3> Calculating the bill for my fruit purchase
 <4> Prints the cost of my fruit in a friendly way
 ----
 // Code example from https://wiki.python.org/moin/SimplePrograms
@@ -515,3 +519,7 @@ Conditional text can also be evaluated based on evaluating conditions like secti
 * http://discuss.asciidoctor.org Asciidoctor Discussion Forum
 * http://twitter.com/mojavelinux Dan Allen
 * http://mrhaki.blogspot.ch/search/label/Asciidoc Mr. Haki's Blog
+* https://github.com/chuckf/intro_asciidoc Chuck's Slides and Source
+
+.Chuck's Introduction to Asciidoc(tor) presentation link (via rawgit)
+image::chuck_github_intro.png[,150]
