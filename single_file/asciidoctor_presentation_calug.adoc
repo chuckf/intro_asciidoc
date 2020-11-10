@@ -259,6 +259,7 @@ Please visit the http://calug.org[CALUG] website for more information.
 Please visit the http://calug.org website for more information.
 
 Please visit the http://calug.org[CALUG] website for more information.
+
 <<<<
 
 Links to local files may be created using the link: macro
